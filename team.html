@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Команда проекта автоматизации бизнес-процессов университета 2ГИС" />
+  <title>Команда — Университет 2ГИС</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">2ГИС — Автоматизация</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-navigation" aria-label="Открыть меню">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="site-navigation" class="site-nav" role="navigation" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О проекте</a></li>
+          <li><a href="team.html" class="active">Участники</a></li>
+          <li><a href="journal.html">Журнал</a></li>
+          <li><a href="resources.html">Ресурсы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main" role="main">
+    <section class="intro container">
+      <h1>Команда проекта</h1>
+
+      <img src="images/team.webp" alt="Команда проекта" class="team-photo">
+
+      <p class="lead">
+        Мы — команда, создающая безопасные, современные и удобные инструменты для внутренней коммуникации.  
+        Проект — это не просто технологии, а вклад в будущее автоматизации процессов.
+      </p>
+    </section>
+
+    <!-- Секция карточек команды -->
+    <section class="container">
+  <h2>Разработчики</h2>
+  <div class="team-cards">
+    <div class="card">Александров Иван Павлович</div>
+    <div class="card">Петрова Мария Сергеевна</div>
+    <div class="card">Смирнов Дмитрий Алексеевич</div>
+    <div class="card">Кузнецова Алина Викторовна</div>
+    <div class="card">Иванов Сергей Николаевич</div>
+    <div class="card">Фёдорова Елена Андреевна</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Аналитики и архитекторы</h2>
+  <div class="team-cards">
+    <div class="card">Николаев Олег Дмитриевич</div>
+    <div class="card">Морозова Виктория Сергеевна</div>
+    <div class="card">Соколов Андрей Павлович</div>
+    <div class="card">Попова Дарья Николаевна</div>
+    <div class="card">Волков Павел Андреевич</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Безопасность и инфраструктура</h2>
+  <div class="team-cards">
+    <div class="card">Гусев Максим Игоревич</div>
+    <div class="card">Лебедева Ольга Алексеевна</div>
+    <div class="card">Крылов Артём Сергеевич</div>
+    <div class="card">Андреева София Николаевна</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>UI/UX и презентации</h2>
+  <div class="team-cards">
+    <div class="card">Сидорова Анастасия Викторовна</div>
+    <div class="card">Мельникова Вероника Андреевна</div>
+    <div class="card">Козлов Николай Сергеевич</div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>Продвижение и документация</h2>
+  <div class="team-cards">
+    <div class="card">Борисов Илья Дмитриевич</div>
+    <div class="card">Тихонова Марина Сергеевна</div>
+    <div class="card">Егоров Владислав Андреевич</div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Университет 2ГИС — проект автоматизации. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Скрипт мобильного меню
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

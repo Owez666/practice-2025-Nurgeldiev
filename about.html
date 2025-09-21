@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="О проекте автоматизации бизнес-процессов университета 2ГИС" />
+  <title>О проекте — Университет 2ГИС</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">2ГИС — Автоматизация</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-navigation" aria-label="Открыть меню">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="site-navigation" class="site-nav" role="navigation" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html" class="active">О проекте</a></li>
+          <li><a href="team.html">Участники</a></li>
+          <li><a href="journal.html">Журнал</a></li>
+          <li><a href="resources.html">Ресурсы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main" role="main">
+    <section class="intro container">
+      <h1>О проекте</h1>
+      <img src="images/about.webp" alt="Визуализация проекта" class="about-photo">
+
+      <p class="lead">
+        Проект автоматизации бизнес-процессов университета 2ГИС — это студенческая инициатива, цель которой —
+        создать удобные, безопасные и эффективные цифровые инструменты для сотрудников и студентов.  
+        Мы стремимся сделать внутренние процессы прозрачными и современными.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Цели проекта</h2>
+      <ul class="styled-list">
+        <li>Автоматизация ключевых внутренних процессов университета.</li>
+        <li>Сокращение времени выполнения рутинных задач.</li>
+        <li>Повышение удобства и доступности сервисов для сотрудников и студентов.</li>
+        <li>Создание централизованных инструментов для коммуникации и аналитики.</li>
+      </ul>
+    </section>
+
+    <section class="container">
+      <h2>Что мы разрабатываем</h2>
+      <ul class="styled-list">
+        <li>Систему для управления заявками и документами.</li>
+        <li>Панель аналитики для отслеживания процессов.</li>
+        <li>Интеграции с существующими корпоративными сервисами.</li>
+        <li>Веб- и мобильные версии приложений для университета.</li>
+      </ul>
+    </section>
+
+    <section class="container">
+      <h2>Основные особенности</h2>
+      <ul class="styled-list">
+        <li>Прозрачность процессов: доступ к информации в реальном времени.</li>
+        <li>Безопасность: защита данных и контроль доступа.</li>
+        <li>Удобный интерфейс: интуитивная навигация и минимализм.</li>
+        <li>Масштабируемость: возможность добавлять новые модули.</li>
+      </ul>
+    </section>
+
+    <section class="container">
+      <h2>Как работает команда</h2>
+      <ul class="styled-list">
+        <li>Совместная разработка с преподавателями и экспертами.</li>
+        <li>Использование современных технологий и практик.</li>
+        <li>Регулярное тестирование на удобство и безопасность.</li>
+        <li>Учёт обратной связи студентов и сотрудников.</li>
+      </ul>
+    </section>
+
+    <section class="container">
+      <h2>Почему это важно</h2>
+      <p>
+        <strong>Для студентов</strong> — это уникальный шанс участвовать в реальном проекте и прокачать навыки.  
+        <strong>Для сотрудников</strong> — удобные сервисы, которые экономят время.  
+        <strong>Для университета</strong> — внедрение инноваций и повышение качества внутренних процессов.
+      </p>
+    </section>
+
+    <section class="container">
+      <h2>Взгляд в будущее</h2>
+      <ul class="styled-list">
+        <li>Расширение интеграций с другими системами.</li>
+        <li>Разработка дополнительных модулей аналитики.</li>
+        <li>Улучшение производительности и безопасности.</li>
+        <li>Мобильные приложения с расширенным функционалом.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Университет 2ГИС — проект автоматизации. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script>
+    // тот же скрипт меню, что в index.html
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('site-navigation');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+      nav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          if (nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
